@@ -1,0 +1,34 @@
+stage.set_background_color("gold")
+
+
+turtle = codesters.Sprite("person4")
+turtle.go_to(0,0)
+turtle.setheading(0)
+turtle.pen_up()
+turtle.speed(100)
+
+
+
+def make_square(size, color, x,y):
+    turtle.go_to(x,y)
+    turtle.color(color)
+    turtle.pen_down()
+    for number in range(4):
+        turtle.forward(size)
+        turtle.right(90)
+    turtle.pen_up()
+
+for i in range (36):
+    new_heading=turtle.heading() +10
+    turtle.setheading(new_heading)
+    make_square(100, "green", 0,0)
+    make_square(100, "blue", 0,0)
+    make_square(120, "red", 0,0)
+
+
+for i in range (72):
+    new_heading=turtle.heading() +5
+    turtle.setheading(new_heading)
+    make_square(50, "green", 0,0)
+    make_square(60, "blue", 0,0)
+    make_square(70, "red", 0,0)
